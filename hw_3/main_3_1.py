@@ -2,33 +2,33 @@ from __future__ import annotations
 
 
 class Wizard:
-    name = str
+    name: str
     house: str
-    magic_level = int
-    spells = list
-    status = bool
+    magic_level: int
+    spells: list
+    status: bool
 
     def __init__(self, name: str, house: str, magic_level: int, status: str, spells=None):
+
         if not isinstance(name, str):
             raise ValueError('Имя волшебника должно быть строкой')
+
         if not isinstance(house, str):
             raise ValueError('Название факультета должно быть строкой')
+
         if not isinstance(magic_level, int):
             raise ValueError('Уровень магической силы должно быть число')
+
         if not magic_level >= 0:
             raise ValueError('Уровень магической силы не может быть отрицательным')
+
         if not isinstance(status, str):
             raise isinstance('Статус волшебника должно быть строкой')
 
         self.__name = name
         self.__house = house
         self.__magic_level = magic_level
-
-        if spells is None:
-            self.__spells = []
-        else:
-            self.__spells = spells
-
+        self.__spells = spells or []
         self.__status = status
 
 
@@ -54,10 +54,17 @@ class Wizard:
 
 
     def set_house(self, house: str):
+
+        if not isinstance(house, str):
+            raise ValueError('Название факультета должно быть строкой')
+
         self.__house = house
 
 
     def set_magic_level(self, magic_level: int):
+
+        if not isinstance(magic_level, int):
+            raise ValueError('Уровень магической силы должно быть число')
 
         if magic_level < 0:
             print('Уровень магической силы не может быть отрицательным!')
@@ -67,31 +74,43 @@ class Wizard:
 
 
     def set_status(self, status: str):
+
+        if not isinstance(status, str):
+            raise ValueError('Статус волшебника должно быть строкой')
+
         self.__status = status
 
 
-    def add_spell(self, spell):
+    def add_spell(self, spell: Spell):
+
         if not isinstance(spell, str):
             raise ValueError('Заклинание должно быть строкой')
+
         self.__spells.append(spell)
 
 
-    def remove_spell(self, spell):
+    def remove_spell(self, spell: Spell):
+
         if spell in self.__spells:
             self.__spells.remove(spell)
+
         else:
-            raise ValueError('Такого заклинания нет')
+            return False
 
 
     def increase_magic_level(self, amount: int):
+
         if not amount >= 0:
             raise ValueError('Уровень магической силы не может быть отрицательным')
+
         self.__magic_level = amount
 
 
     def __str__(self):
-        if self.__spells == []:
+
+        if len(self.__spells) == 0:
             spells = 'Заклинаний нет'
+
         else:
             spells = self.__spells
             spells = ', '.join(spells)
@@ -112,14 +131,19 @@ class Spell:
     description = str
 
     def __init__(self, name: str, difficulty_level: int, type: str, description: str):
+
         if not isinstance(name, str):
             raise ValueError('Имя заклинания должно быть строкой')
+
         if not isinstance(difficulty_level, int):
             raise ValueError('Уровень сложности должно быть числом')
+
         if not 1 <= difficulty_level <= 10:
             raise ValueError('Уровень сложности должен быть от 1 до 10')
+
         if not isinstance(type, str):
             raise ValueError('Тип заклинания должен быть строкой')
+
         if not isinstance(description, str):
             raise ValueError('Описание должно быть строкой')
 
@@ -142,23 +166,31 @@ class Spell:
         return self.__description
 
     def set_name(self, new_name: str):
+
         if not isinstance(new_name, str):
             raise ValueError('Имя заклинания должно быть строкой')
+
         self.__name = new_name
 
     def set_difficulty_level(self, new_value: int):
+
         if not isinstance(new_value, int):
             raise ValueError('Уровень сложности должно быть числом')
+
         if not 1 >= new_value <= 10:
             raise ValueError('Уровень сложности должен быть от 1 до 10')
+
         self.__difficulty_level = new_value
 
     def set_type(self, new_type):
+
         if not isinstance(new_type, str):
             raise ValueError('Тип заклинания должен быть строкой')
+
         self.__type = new_type
 
     def set_description(self, new_description):
+
         if not isinstance(new_description, str):
             raise ValueError('Описание должно быть строкой')
 

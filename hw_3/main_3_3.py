@@ -8,12 +8,16 @@ class Robot:
     status = bool
 
     def __init__(self, part_number: any, model: any, current_task: str, charge_level: int, status: bool):
+
         if not isinstance(current_task, str):
             raise ValueError('Текущая задача должно быть строкой')
+
         if not isinstance(charge_level, int):
             raise ValueError('Уровень заряда должен быть числом')
+
         if charge_level < 0:
             raise ValueError('Уровень заряда не может быть отрицательной')
+
         if not isinstance(status, bool):
             raise ValueError('Состояние должно быть булевым значением (True/False')
 
@@ -47,18 +51,24 @@ class Robot:
         self.__model = new_model
 
     def set_current_task(self, new_current_task: str):
+
         if not isinstance(new_current_task, str):
             raise ValueError('Текущая задача должна быть строкой')
+
         self.__current_task = new_current_task
 
     def set_charge_level(self, value: int):
+
         if not isinstance(value, int):
             raise ValueError('Уровень заряда должен быть числом')
+
         if value < 0:
             raise ValueError('Уровень заряда не может быть отрицательным')
+
         self.__charge_level = value
 
     def set_status(self, new_status: bool):
+
         if not isinstance(new_status, bool):
             raise ValueError('Состояние должно быть булевым значением (True/False)')
 
@@ -67,7 +77,7 @@ class Robot:
 
     def __str__(self):
         status = 'В работе'
-        if self.__status == False:
+        if self.__status is False:
             status = 'На перерыве'
 
         return (f'Серийный номер: {self.__part_number};\n'
