@@ -1,0 +1,91 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
+  <diagram name="Страница — 1" id="KtgKwt1HHfoGlmybZ1kl">
+    <mxGraphModel dx="1050" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-1" value="HogwartsStudent" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="200" width="310" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-2" value="- name: str&lt;div&gt;- house: str&lt;/div&gt;&lt;div&gt;- mp: int&lt;/div&gt;&lt;div&gt;- spells: List(Spells)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2H7cSJI9YiODnvcz6EyT-1">
+          <mxGeometry y="26" width="310" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="2H7cSJI9YiODnvcz6EyT-1">
+          <mxGeometry y="90" width="310" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-4" value="+ learn_spell(spell: Spell, hogwarts: Hogwarts) -&amp;gt; void&lt;div&gt;+ cast_spell(target: HogwartsStudent) -&amp;gt; void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2H7cSJI9YiODnvcz6EyT-1">
+          <mxGeometry y="98" width="310" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-5" value="Spell" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="200" width="240" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-6" value="- name: str&lt;div&gt;- description: str&lt;/div&gt;&lt;div&gt;- mp_cost: int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2H7cSJI9YiODnvcz6EyT-5">
+          <mxGeometry y="26" width="240" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="2H7cSJI9YiODnvcz6EyT-5">
+          <mxGeometry y="80" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-8" value="+ cast(target: HogwartsStudent) - void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2H7cSJI9YiODnvcz6EyT-5">
+          <mxGeometry y="88" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-9" value="Hogwarts" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="10" width="290" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-10" value="- students: List[HogwartsStudent]&lt;div&gt;- spells: List[Spell]&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2H7cSJI9YiODnvcz6EyT-9">
+          <mxGeometry y="26" width="290" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="2H7cSJI9YiODnvcz6EyT-9">
+          <mxGeometry y="60" width="290" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-12" value="+ enroll_student(student: HogwartsStudent) -&amp;gt; void&lt;div&gt;+ teach_spell(spell: Spell) -&amp;gt; void&lt;/div&gt;&lt;div&gt;+ simulate_duel(student1: HogwartsStudent, student2: HogwartsStudent) -&amp;gt; str&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2H7cSJI9YiODnvcz6EyT-9">
+          <mxGeometry y="68" width="290" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-13" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.029;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2H7cSJI9YiODnvcz6EyT-1" target="2H7cSJI9YiODnvcz6EyT-12">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="110" y="79.58" as="sourcePoint" />
+            <mxPoint x="279" y="80" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="145" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-14" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="2H7cSJI9YiODnvcz6EyT-13">
+          <mxGeometry x="0.7408" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-15" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="2H7cSJI9YiODnvcz6EyT-13">
+          <mxGeometry x="-0.8339" relative="1" as="geometry">
+            <mxPoint x="15" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-16" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="2H7cSJI9YiODnvcz6EyT-5" target="2H7cSJI9YiODnvcz6EyT-9">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="580" y="130" as="sourcePoint" />
+            <mxPoint x="650" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-17" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="2H7cSJI9YiODnvcz6EyT-16">
+          <mxGeometry x="0.7328" y="1" relative="1" as="geometry">
+            <mxPoint y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-18" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="2H7cSJI9YiODnvcz6EyT-16">
+          <mxGeometry x="-0.8493" y="-1" relative="1" as="geometry">
+            <mxPoint x="9" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2H7cSJI9YiODnvcz6EyT-19" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.63;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;entryX=1.007;entryY=0.568;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2H7cSJI9YiODnvcz6EyT-6" target="2H7cSJI9YiODnvcz6EyT-2">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="300" y="280" as="sourcePoint" />
+            <mxPoint x="350" y="270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="260" />
+              <mxPoint x="350" y="262" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
